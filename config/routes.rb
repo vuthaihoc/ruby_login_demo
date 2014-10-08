@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
 
+
+  #user controller
   get    '/users(.:format)'          => 'users#index', as: :users
   post   '/users(.:format)'          => 'users#create',    as: :users_post
   get    '/users/new(.:format)'      => 'users#new',   as: :new_user
-  get    '/users/:id/edit(.:format)' => 'users#edit',    as: :edit_user
-  get    '/users/:id(.:format)'      => 'users#show' ,   as: :user
-  patch  '/users/:id(.:format)'      => 'users#update',    as: :users_patch
-  put    '/users/:id(.:format)'      => 'users#update' ,   as: :users_put
-  delete '/users/:id(.:format)'      => 'users#destroy' ,  as: :users_destroy
+  get    '/users/:id/edit(.:format)' => 'users#edit',    as: :edit_user, constraints: {id: /[0-9]+/}
+  get    '/users/:id(.:format)'      => 'users#show' ,   as: :user, constraints: {id: /[0-9]+/}
+  patch  '/users/:id(.:format)'      => 'users#update',    as: :users_patch, constraints: {id: /[0-9]+/}
+  put    '/users/:id(.:format)'      => 'users#update' ,   as: :users_put, constraints: {id: /[0-9]+/}
+  delete '/users/:id(.:format)'      => 'users#destroy' ,  as: :users_destroy, constraints: {id: /[0-9]+/}
   get    '/users/register(.:format)' => 'users#register', as: :users_register
-
 
   resources :sessions, only: [:new, :create, :destroy]
 
