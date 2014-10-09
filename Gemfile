@@ -38,3 +38,6 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'rspec', '2.99.0'
+
+#DJ adapter for active job
+gem 'delayed_job_active_record', '4.0.2'

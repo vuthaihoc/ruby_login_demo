@@ -17,3 +17,7 @@
 
 # Ignore ftp setting file
 /ftpsync.settings
+
+#ignore logfile of local server
+/server-custom-log.log
+/server-error-log.log
