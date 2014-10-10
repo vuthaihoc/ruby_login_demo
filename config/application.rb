@@ -18,7 +18,7 @@ module RubyThird
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    config.i18n.default_locale = 'vn'
+    config.i18n.default_locale = 'en'
 
     # Make sure to disable raising error in ActionView:
     config.action_view.raise_on_missing_translations = false

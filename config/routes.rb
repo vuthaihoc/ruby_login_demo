@@ -12,14 +12,19 @@ Rails.application.routes.draw do
   delete '/users/:id(.:format)'      => 'users#destroy' ,  as: :users_destroy, constraints: {id: /[0-9]+/}
   get    '/users/register(.:format)' => 'users#register', as: :users_register
   post   '/users/register(.:format)' => 'users#register', as: :users_register_post
+  get    '/profile'                  => 'users#profile', as: :users_profile_path 
 
+  #authentication routers
   resources :sessions, only: [:new, :create, :destroy]
+  match '/signup',  to: 'users#register',            via: 'get'
+  match '/signin',  to: 'sessions#new',             via: 'get'
+  match '/signout', to: 'sessions#destroy',         via: 'delete', as: :user_signout
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'users#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

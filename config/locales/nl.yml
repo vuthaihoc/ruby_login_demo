@@ -1,5 +1,9 @@
 ---
 en:
+  ? "DEMO LOGIN"
+  : "DEMO LOGIN"
+  ? "User list"
+  : "User list"
   activerecord_scope:
     attributes_scope:
       user_scope:
@@ -23,28 +27,58 @@ en:
               blank: "Password is required"
             username_scope:
               blank: "Uername is required"
-nl: ~
-vn:
+  view_scope:
+    welcome: "Welcome to my website"
+ja:
   activerecord_scope:
     attributes_scope:
       user_scope:
         email: Email
-        name: 'Tên đầy đủ'
-        password: 'Mật khẩu'
-        password_confirmation: 'Xác nhận lại mật khẩu'
-        username: 'Tên truy cập'
+        name: "Tên đầy đủ"
+        password: "Mật khẩu"
+        password_confirmation: "Xác nhận lại mật khẩu"
+        username: "Tên truy cập"
     errors_scope:
       models_scope:
         user_scope:
           attributes_scope:
             email_scope:
-              blank: 'Phải nhập email'
-              email: 'Không đúng định dạng email'
+              blank: "Phải nhập email"
+              email: "Không đúng định dạng email"
             name_scope:
-              blank: 'Phải nhập tên đầy đủ'
+              blank: "Phải nhập tên đầy đủ"
             password_confirmation_scope:
-              blank: 'Bạn chưa xác nhận mật khẩu'
+              blank: "Bạn chưa xác nhận mật khẩu"
             password_scope:
-              blank: 'Hãy nhập mật khẩu'
+              blank: "Hãy nhập mật khẩu"
             username_scope:
-              blank: 'Nhập tên truy cập'
+              blank: "Nhập tên truy cập"
+nl: ~
+vn:
+  ? "DEMO LOGIN"
+  : "DEMO LOGIN"
+  ? "User list"
+  : "Danh sách người dùng"
+  activerecord_scope:
+    attributes_scope:
+      user_scope:
+        email: Email
+        name: "Tên đầy đủ"
+        password: "Mật khẩu"
+        password_confirmation: "Xác nhận lại mật khẩu"
+        username: "Tên truy cập"
+    errors_scope:
+      models_scope:
+        user_scope:
+          attributes_scope:
+            email_scope:
+              blank: "Phải nhập email"
+              email: "Không đúng định dạng email"
+            name_scope:
+              blank: "Phải nhập tên đầy đủ"
+            password_confirmation_scope:
+              blank: "Bạn chưa xác nhận mật khẩu"
+            password_scope:
+              blank: "Hãy nhập mật khẩu"
+            username_scope:
+              blank: "Nhập tên truy cập"
