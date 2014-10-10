@@ -13,6 +13,7 @@ application up and running.
 
 * [Delayed Job adapter for active job ](https://github.com/collectiveidea/delayed_job)
 * [Active job document](http://edgeguides.rubyonrails.org/active_job_basics.html)
+
 # Change log #
 
 *10/10/2014 : 
