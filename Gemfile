@@ -41,3 +41,14 @@ gem 'rspec', '2.99.0'
 
 #DJ adapter for active job
 gem 'delayed_job_active_record', '4.0.2'
+#bootstrap form 
+gem 'bootstrap_form'
+#some validate add
+gem 'validates', '1.0.0'
+#generate i18n (only for development)
+gem 'i18n_generators', '1.2.1'
+#gem 'i18n_translation_spawner'
+gem 'i18n-workflow', github: 'moneybird/i18n-workflow'
+
+gem 'json', '1.8.1'
+

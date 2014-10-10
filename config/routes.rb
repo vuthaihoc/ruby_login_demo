@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   put    '/users/:id(.:format)'      => 'users#update' ,   as: :users_put, constraints: {id: /[0-9]+/}
   delete '/users/:id(.:format)'      => 'users#destroy' ,  as: :users_destroy, constraints: {id: /[0-9]+/}
   get    '/users/register(.:format)' => 'users#register', as: :users_register
+  post   '/users/register(.:format)' => 'users#register', as: :users_register_post
 
   resources :sessions, only: [:new, :create, :destroy]
 

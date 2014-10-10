@@ -1,0 +1,50 @@
+---
+en:
+  activerecord_scope:
+    attributes_scope:
+      user_scope:
+        email: Email
+        name: "Full name"
+        password: Password
+        password_confirmation: "Password confirmation"
+        username: Username
+    errors_scope:
+      models_scope:
+        user_scope:
+          attributes_scope:
+            email_scope:
+              blank: "Email is required"
+              email: "Invalid email format"
+            name_scope:
+              blank: "Full name is required"
+            password_confirmation_scope:
+              blank: "Password confirmation is required"
+            password_scope:
+              blank: "Password is required"
+            username_scope:
+              blank: "Uername is required"
+nl: ~
+vn:
+  activerecord_scope:
+    attributes_scope:
+      user_scope:
+        email: Email
+        name: 'Tên đầy đủ'
+        password: 'Mật khẩu'
+        password_confirmation: 'Xác nhận lại mật khẩu'
+        username: 'Tên truy cập'
+    errors_scope:
+      models_scope:
+        user_scope:
+          attributes_scope:
+            email_scope:
+              blank: 'Phải nhập email'
+              email: 'Không đúng định dạng email'
+            name_scope:
+              blank: 'Phải nhập tên đầy đủ'
+            password_confirmation_scope:
+              blank: 'Bạn chưa xác nhận mật khẩu'
+            password_scope:
+              blank: 'Hãy nhập mật khẩu'
+            username_scope:
+              blank: 'Nhập tên truy cập'

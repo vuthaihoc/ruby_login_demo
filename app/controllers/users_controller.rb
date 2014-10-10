@@ -17,8 +17,25 @@ class UsersController < ApplicationController
     @user = User.new
   end
   # GET /users/register
+  # POST /users/register
   def register
-    @user = User.new
+    @posted = user_params
+    @user = User.new(@posted)
+    #save if something posted
+    respond_to do |format|
+      if @posted.blank? == false
+        if @user.save
+          format.html { redirect_to user_register_url, notice: 'A active code was sent to your email. Thank for your registration !'}
+          format.json { render :register, status: :created, location: @user }
+        else 
+          format.html { render :register }
+          format.json { render json: @user.errors, status: :unprocessable_entity }
+        end
+      else 
+        format.html { render :register }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   # GET /users/1/edit
@@ -73,6 +90,11 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_match, :username)
+      if params.has_key? :user 
+        return params.require(:user).permit(:name, :email, :password, :password_match, :username)
+      else 
+        return nil
+      end
+
     end
 end
