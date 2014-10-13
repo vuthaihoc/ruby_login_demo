@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   #authentication routers
   resources :sessions, only: [:new, :create, :destroy]
   match '/signup',  to: 'users#register',            via: 'get'
-  match '/signin',  to: 'sessions#new',             via: 'get'
+  match '/signin',  to: 'sessions#new',             via: 'get'  , as: :user_signin
   match '/signout', to: 'sessions#destroy',         via: 'delete', as: :user_signout
 
   # The priority is based upon order of creation: first created -> highest priority.

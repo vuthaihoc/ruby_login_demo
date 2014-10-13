@@ -6,7 +6,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">Signin system</div>
 			<div class="panel-body">
-				<% if flash.now[:error] %>
+				<% if flash[:error] %>
 					 <div class="alert alert-warning .alert-dismissible" role="alert">
 					 	<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 					 	<%= flash[:error] %>

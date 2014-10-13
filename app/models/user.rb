@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
 	validates :email, uniqueness: true , presence: true, email: true
 	validates :password, confirmation: true, presence: true
   	validates :password_confirmation, presence: true
+  	#relation
+  	has_one :group
 
   	#make new remember token after create new user
   	before_create :create_remember_token

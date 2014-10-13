@@ -1,7 +1,10 @@
 --- 
 en: 
   Home: ""
+  Login: ""
   Logout: ""
   ? "More options"
   : ""
   Profile: ""
+  ? "You must be logged in to access this section"
+  : ""

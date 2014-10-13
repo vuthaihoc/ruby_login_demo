@@ -1,5 +1,16 @@
 class UsersController < ApplicationController
+
+  attr_accessor :action_require_login
+
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+
+
+  #initialize
+  def initialize
+    super
+    @action_require_login = { index: :all , show: :admin_only, destroy: :admin_only, create: :admin_only}
+  end
+
 
   # GET /users
   # GET /users.json
