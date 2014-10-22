@@ -14,14 +14,15 @@ application up and running.
 * [Delayed Job adapter for active job ](https://github.com/collectiveidea/delayed_job)
 * [Active job document](http://edgeguides.rubyonrails.org/active_job_basics.html)
 
-# Features #
+## Features ##
 
 * Login/logout
-* multi language suported
+* multi language suported(quick change language from links)
 * Bootstrap 3
+* Permission setting with hash for each controller(implement from ApplicationController)
 * ...
 
-# Todo #
+## Todo ##
 
 * Registration suport
 * Active by email with token key
@@ -29,7 +30,7 @@ application up and running.
 * Using Angularjs
 * ...
 
-# Change log #
+## Change log ##
 
 * 10/10/2014 :
  

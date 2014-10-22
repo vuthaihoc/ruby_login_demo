@@ -13,14 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20141013061354) do
 
-  create_table "group_user", id: false, force: true do |t|
-    t.integer "user_id",  null: false
-    t.integer "group_id", null: false
-  end
-
-  add_index "group_user", ["group_id"], name: "index_group_user_on_group_id", using: :btree
-  add_index "group_user", ["user_id"], name: "index_group_user_on_user_id", using: :btree
-
   create_table "groups", force: true do |t|
     t.string   "name"
     t.integer  "level"
@@ -33,8 +25,9 @@ ActiveRecord::Schema.define(version: 20141013061354) do
     t.string   "name"
     t.string   "email"
     t.string   "username"
+    t.integer  "group_id",        default: 6
     t.string   "password"
-    t.string   "active_status"
+    t.string   "active_status",   default: "registed"
     t.string   "active_key"
     t.datetime "active_key_sent"
     t.string   "remember_token"

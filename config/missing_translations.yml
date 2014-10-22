@@ -1,10 +1,6 @@
 --- 
-en: 
-  Home: ""
-  Login: ""
+vn: 
   Logout: ""
   ? "More options"
   : ""
   Profile: ""
-  ? "You must be logged in to access this section"
-  : ""

@@ -13,12 +13,12 @@
 					 </div>
 				<% end %>
 				<%= bootstrap_form_for(:sessions, url: sessions_path ) do |f| %>
-				<%= f.text_field :email %>
-				<%= f.password_field :password %>
-				<%= f.submit "Sign in" %>
+				<%= f.text_field :email, label: t('Email') %>
+				<%= f.password_field :password, label: t('Password') %>
+				<%= f.submit t("Sign in") %>
 				<% end %>
 
-				<p>New user? <%= link_to "Sign up now!", users_register_path %></p>
+				<p>New user? <%= link_to t("Sign up now!"), users_register_path %></p>
 			</div>
 		</div>
 	</div>

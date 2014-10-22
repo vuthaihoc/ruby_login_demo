@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  #default hoem page
+  root 'home#index'
+  #hoem controller routers
+  get   '/home/set_locale/:locale' => 'home#set_locale', as: :set_locale
+  post   '/home/set_locale/:locale' => 'home#set_locale'
+
 
   #user controller
   get    '/users(.:format)'          => 'users#index', as: :users
@@ -24,7 +30,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'users#index'
+  #root 'users#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

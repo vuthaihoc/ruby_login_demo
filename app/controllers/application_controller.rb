@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
   #includes
+  include ApplicationHelper
   include SessionsHelper
+  include UsersHelper
 
   #Hash of action will be require login and how to check if not only logined, may be is_me, or created_by_me
   #If only require login, value should be (Symbol):all or (String)all
@@ -18,10 +20,6 @@ class ApplicationController < ActionController::Base
   end
 
   before_action :login_require_check
- 
-	def set_locale
-	  I18n.locale = params[:locale] || I18n.default_locale
-	end
 
 
   #initialize
@@ -34,13 +32,15 @@ class ApplicationController < ActionController::Base
 	private
 
 	def login_require_check
+    setting_language
+    #
     unless @action_require_login.nil?
       requesting_action = params[:action] # get current action
         if @action_require_login.has_key?(requesting_action.to_sym) # check if this action require login
             more_checking_function = @action_require_login[requesting_action.to_sym]
             if signed_in? # 
-                flash[:warning] = "logined"
-                if( more_checking_function != :all && self.respond_to(more_checking_function))
+                #flash[:warning] = "logined"
+                if more_checking_function != :all && self.respond_to?(more_checking_function)
                   unless self.send(more_checking_function)
                     flash[:error] = t("You are not enough permission to access this section") 
                     redirect_to current_user
@@ -59,7 +59,11 @@ class ApplicationController < ActionController::Base
   end
   #some default filter after login requred ok
   def admin_only
-    
+    if is_admin? 
+      return true
+    else
+      return false 
+    end
   end
 
   

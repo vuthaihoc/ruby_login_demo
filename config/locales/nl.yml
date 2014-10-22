@@ -2,8 +2,18 @@
 en:
   ? "DEMO LOGIN"
   : "DEMO LOGIN"
+  Email: Email
+  Home: Home
+  Login: Login
+  Password: Password
+  ? "Sign in"
+  : "Sign in"
+  ? "Sign up now!"
+  : "Sign up now!"
   ? "User list"
   : "User list"
+  ? "You must be logged in to access this section"
+  : "You must be logged in to access this section"
   activerecord_scope:
     attributes_scope:
       user_scope:
@@ -27,6 +37,13 @@ en:
               blank: "Password is required"
             username_scope:
               blank: "Uername is required"
+  home_scope:
+    header_text: Homepage
+    intro_text: "Member list"
+  user_scope:
+    email: Email
+    join_date: "Join date"
+    name: "Full name"
   view_scope:
     welcome: "Welcome to my website"
 ja:
@@ -57,8 +74,18 @@ nl: ~
 vn:
   ? "DEMO LOGIN"
   : "DEMO LOGIN"
+  Email: Email
+  Home: "Trang chủ"
+  Login: "Đăng nhập"
+  Password: "Mật khẩu"
+  ? "Sign in"
+  : "Đăng nhập"
+  ? "Sign up now!"
+  : "Đăng ký ngay!"
   ? "User list"
   : "Danh sách người dùng"
+  ? "You must be logged in to access this section"
+  : "Bạn phải đăng nhập để thực hiện thao tác này"
   activerecord_scope:
     attributes_scope:
       user_scope:
@@ -82,3 +109,10 @@ vn:
               blank: "Hãy nhập mật khẩu"
             username_scope:
               blank: "Nhập tên truy cập"
+  home_scope:
+    header_text: "Trang chủ"
+    intro_text: "Danh sách thành viên"
+  user_scope:
+    email: Email
+    join_date: "Ngày gia nhập"
+    name: "Tên đầy đủ"

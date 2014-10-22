@@ -7,7 +7,7 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" href="#"><%= t("DEMO LOGIN") %></a>
+		<a class="navbar-brand" href="<%= root_url %>"><%= t("DEMO LOGIN") %></a>
 	</div>
 
 	<!-- Collect the nav links, forms, and other content for toggling -->
@@ -17,12 +17,12 @@
 		</ul>
 		<ul class="nav navbar-nav">
 			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-				EN<b class="caret"></b>
+				<a href="<%= root_url %>" class="dropdown-toggle" data-toggle="dropdown">
+				<%= session[:locale].upcase %><b class="caret"></b>
 				</a>
 				<ul class="dropdown-menu">
-					<li><a href="">VN</a></li>
-					<li><a href="">JP</a></li>
+					<li><%= link_to 'VN', set_locale_url(:locale => :vn) %></li>
+					<li><%= link_to 'EN', set_locale_url(:locale => :en) %></li>
 				</ul>
 			</li>
 		</ul>
