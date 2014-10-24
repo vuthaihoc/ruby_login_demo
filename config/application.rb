@@ -22,6 +22,11 @@ module RubyThird
 
     # Make sure to disable raising error in ActionView:
     config.action_view.raise_on_missing_translations = false
-
+    
+    #assets config
+    config.assets.paths << Rails.root.join("vendor","assets","bower_components")
+    #config.assets.paths << Rails.root.join("vendor","assets","bower_components","bootstrap-sass-official","assets","fonts")
+    config.assets.precompile << %r(.*.(?:eot|svg|ttf|woff)$)
+    
   end
 end
