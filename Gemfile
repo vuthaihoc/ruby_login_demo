@@ -38,6 +38,7 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'rspec', '2.99.0'
+gem "rspec-rails", "~> 2.0"
 
 #DJ adapter for active job
 gem 'delayed_job_active_record', '4.0.2'
@@ -51,4 +52,6 @@ gem 'i18n_generators', '1.2.1'
 gem 'i18n-workflow', github: 'moneybird/i18n-workflow'
 
 gem 'json', '1.8.1'
+
+gem 'bower-rails'
 

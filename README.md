@@ -20,7 +20,7 @@ application up and running.
 * multi language suported(quick change language from links)
 * Bootstrap 3
 * Permission setting with hash for each controller(implement from ApplicationController)
-* ...
+* Using bower to manage front end plugin requirement
 
 ## Todo ##
 
